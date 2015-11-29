@@ -1,7 +1,7 @@
 package com.zeusjava.kernel.service.impl;
 
-import com.zeusjava.kernel.dao.UserMapper;
 import com.zeusjava.kernel.entity.User;
+import com.zeusjava.kernel.mapper.UserMapper;
 import com.zeusjava.kernel.service.IUserService;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
