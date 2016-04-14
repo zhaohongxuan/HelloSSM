@@ -58,11 +58,11 @@ maven会在target目录生成war包
 ##### Tips：
 maven的设置选项 `use Maven Output Directories` 要勾选上
 ####3.配置Tomcat
-1.点击`Run-Run Configurations`
-2.点击`+`选择`tomcat server->local`
-3.点击`Configure` 配置好Tomcat的解压目录，端口号8081
-4.点击`Deployment选项卡`，点击`+`号，选择一个artifact，就是第二部的war包，Application Context 配置为`HelloSSM`
-5.点击 Tomcat的右边的`运行`按钮,运行tomcat
-在任务栏输入`http://localhost:8081/HelloSSM/user/userInfo/1`,回车
+1. 点击`Run-Run Configurations`
+2. 点击`+`选择`tomcat server->local`
+3. 点击`Configure` 配置好Tomcat的解压目录，端口号8081
+4. 点击`Deployment选项卡`，点击`+`号，选择一个artifact，就是第二部的war包，Application Context 配置为`HelloSSM`
+5. 点击 Tomcat的右边的`运行`按钮,运行tomcat
+在任务栏输入`http://localhost:8081/HelloSSM/user/userInfo/1`,回车出现结果，一个简单的SSM项目环境就搭建好了。
 
-一个简单的SSM项目环境就搭建好了。
+
