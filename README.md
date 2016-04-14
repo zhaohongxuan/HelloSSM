@@ -47,31 +47,22 @@ insert  into `user`(`user_name`,`password`) values ('赵小轩','123456');
 ```
 
 
-
-
 ## 三.添加tomcat服务器并部署war包
 ####1.`File-Project Structure`点击`Artifacts`一栏
 点击`+`，选择`Web-Application-Exploded`然后选择from maven选中本项目
 Web Application Exploded是没有压缩的war包，相当于文件夹
 Web Application Achieved是压缩后的war包
-![tomcat](http://i13.tietuku.com/39c29f83a1e66eda.png)
-
 ####2.生成war包
 依次执行maven Lifecyle的`clean->compile->package`命令
 maven会在target目录生成war包
-Tips：
+##### Tips：
 maven的设置选项 `use Maven Output Directories` 要勾选上
-####3.点击`Run-Run Configurations`
-点击`+`选择`tomcat server->local`
-![tomcat](http://i13.tietuku.com/703c0105327e168d.png)
-![tomcat](http://i13.tietuku.com/9277871664046bc8.png)
-####4.点击`Configure`
-![tomcat](http://i13.tietuku.com/41644246a4f5a562.png)
+####3.配置Tomcat
+1.点击`Run-Run Configurations`
+2.点击`+`选择`tomcat server->local`
+3.点击`Configure` 配置好Tomcat的解压目录，端口号8081
+4.点击`Deployment选项卡`，点击`+`号，选择一个artifact，就是第二部的war包，Application Context 配置为`HelloSSM`
+5.点击 Tomcat的右边的`运行`按钮,运行tomcat
+在任务栏输入`http://localhost:8081/HelloSSM/user/userInfo/1`,回车
 
-###5.点击`Deployment选项卡`，点击`+`号，选择一个artifact，就是第二部的war包
-![tomcat](http://i13.tietuku.com/6eaacb039997ba33.png)
-
-###6.OK启动服务器
-在任务栏输入`http://localhost:8081/HelloSSM/user/userInfo/1`,回车，结果如下：
 一个简单的SSM项目环境就搭建好了。
-![tomcat运行结果](http://i11.tietuku.com/51e0b1e59d159108.png)
