@@ -3,6 +3,7 @@
 
    使用构建的简单的框架的Demo，界面是简单jsp页面，没有使用样式，开发过程中，使用最多的还是作为后台和前端或者APP客户端进行交互，最主要的还是后台功能，所以页面上没有去在意，
    后期会逐渐使用`vue.js+bootstrap`和`Spring MVC Restful`控制器实现前后端分离。
+   具体介绍页面请点击 [使用Maven搭建Spring+SpringMVC+Mybatis+ehcache项目](http://zeusjava.com/2015/10/18/build-an-maven-spring-mybatis-ehcache-web-project)
    
 ## 主要功能
    1. 实现Spring、SpringMVC、Mybatis三个框架的整合
@@ -64,5 +65,6 @@ maven的设置选项 `use Maven Output Directories` 要勾选上
 4. 点击`Deployment选项卡`，点击`+`号，选择一个artifact，就是第二部的war包，Application Context 配置为`HelloSSM`
 5. 点击 Tomcat的右边的`运行`按钮,运行tomcat
 在任务栏输入`http://localhost:8081/HelloSSM/user/userInfo/1`,回车出现结果，一个简单的SSM项目环境就搭建好了。
+
 
 
