@@ -20,12 +20,5 @@
               <typeAlias alias="User" type="com.zeusjava.kernel.entity.User" />
        </typeAliases>
 
-  <!--     <mappers>
-              &lt;!&ndash;<mapper resource="com/zeusjava/kernel/mapper/UserMapper.xml"/>&ndash;&gt;
-              &lt;!&ndash;<mapper class="com.zeusjava.kernel.dao.UserMapper"/>&ndash;&gt;
-              <mapper url="file:///D:/idea/HelloSSM/src/main/java/com/zeusjava/kernel/mapper/UserMapper.xml"/>
-              &lt;!&ndash;<package name="com.zeusjava.kernel.dao"/>&ndash;&gt;
-              &lt;!&ndash;<mapper class="com.zeusjava.kernel.dao.UserMapper"/>&ndash;&gt;
 
-       </mappers>-->
 </configuration>

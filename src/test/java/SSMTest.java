@@ -13,19 +13,11 @@ import javax.annotation.Resource;
  * Created by LittleXuan on 2015/10/17.
  */
 @RunWith(SpringJUnit4ClassRunner.class)     //表示继承了SpringJUnit4ClassRunner类
-@ContextConfiguration(locations = {"classpath:spring-mybatis.xml"})
+@ContextConfiguration(locations = { "classpath:spring/spring-mybatis.xml" })
 public class SSMTest {
     private static Logger logger = LoggerFactory.getLogger(SSMTest.class);
-
-    //  private ApplicationContext ac = null;
     @Resource
-    private IUserService userService = null;
-
-//  @Before
-//  public void before() {
-//      ac = new ClassPathXmlApplicationContext("applicationContext.xml");
-//      userService = (IUserService) ac.getBean("userService");
-//  }
+    private IUserService userService;
 
     @Test
     public void test1() {
