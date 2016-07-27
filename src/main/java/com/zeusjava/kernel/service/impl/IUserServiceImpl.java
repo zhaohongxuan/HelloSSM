@@ -6,6 +6,7 @@ import com.zeusjava.kernel.service.IUserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by LittleXuan on 2015/10/17.
@@ -17,5 +18,20 @@ public class IUserServiceImpl implements IUserService {
 
     public User getUserById(int userId) {
         return this.userMapper.selectUserByUserId(userId);
+    }
+
+    @Override
+    public List<User> getAllUser() {
+        return userMapper.selectAllUser();
+    }
+
+    @Override
+    public Boolean addUser(User user) {
+        return userMapper.insertSelective(user)>0?true:false;
+    }
+
+    @Override
+    public Boolean deleteUser(Integer id) {
+        return userMapper.deleteByPrimaryKey(id)>0?true:false;
     }
 }

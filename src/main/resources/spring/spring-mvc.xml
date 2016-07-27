@@ -10,6 +10,7 @@
 ">
 	<!--扫描自动依赖注入的包名 -->
 	<context:component-scan base-package="com.zeusjava.web.controller"/>
+	<context:component-scan base-package="com.zeusjava.web.rest"/>
 	<!-- 默认的注解映射的支持 -->
 	<mvc:annotation-driven/>
 	<!--视图解释器 -->
@@ -17,5 +18,8 @@
 		<property name="prefix" value="/WEB-INF/jsp/"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
+
+	<mvc:resources location="/static/" mapping="/static/**" />
+	<mvc:default-servlet-handler />
 
 </beans>
