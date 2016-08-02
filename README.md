@@ -1,13 +1,14 @@
 
 [![Apache 2](http://img.shields.io/badge/license-Apache%202-red.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
-   使用构建的简单的框架的Demo，界面是简单jsp页面，没有使用样式，开发过程中，使用最多的还是作为后台和前端或者APP客户端进行交互，最主要的还是后台功能，所以页面上没有去在意，
-   后期会逐渐使用`vue.js+bootstrap`和`Spring MVC Restful`控制器实现前后端分离。
+   使用Spring +Spring MVC +Mybatis 构建的简单的框架的Demo，前端界面使用`vue.js+bootstrap`，后台使用`Spring MVC Restful`控制器实现前后端分离。
+   后面会使用`webpack`打包实现前端资源的部署
    具体介绍页面请点击 [使用Maven搭建Spring+SpringMVC+Mybatis+ehcache项目](http://zeusjava.com/2015/10/18/build-an-maven-spring-mybatis-ehcache-web-project)
    
 ## 主要功能
    1. 实现Spring、SpringMVC、Mybatis三个框架的整合
    2. 使用ehcache缓存
+   3. vue.js的简单使用
    3. Mybatis Generator的使用
    
 
@@ -19,6 +20,7 @@
     Maven:3.1.1
     Tomcat：7.0.65
     Mysql：5.5.20
+    vue.js: V1.0.26
     
 Fork项目Clone到本地
 
