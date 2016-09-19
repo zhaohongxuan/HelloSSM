@@ -5,10 +5,10 @@
 %>
 <html>
 <head>
-    <link href="<%=basePath%>/static/css/bootstrap.css" rel="stylesheet"/>
-    <link href="<%=basePath%>/static/css/bootstrap-theme.css" rel="stylesheet"/>
-    <script src="<%=basePath%>/static/js/jquery-2.0.3.min.js" type="text/javascript"></script>
-    <script src="<%=basePath%>/static/js/bootstrap.js" type="text/javascript"></script>
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/jquery/3.1.0/core.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
     <script src="<%=basePath%>/static/js/vue.js" type="text/javascript"></script>
 
 </head>
