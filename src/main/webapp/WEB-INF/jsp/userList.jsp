@@ -9,7 +9,7 @@
     <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.css" rel="stylesheet">
     <script src="//cdn.bootcss.com/jquery/3.1.0/core.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
-    <script src="<%=basePath%>/static/js/vue.js" type="text/javascript"></script>
+    <script src="//cdn.bootcss.com/vue/1.0.26/vue.js"></script>
 
 </head>
 <body>
