@@ -1,5 +1,4 @@
-
-[![Apache 2](http://img.shields.io/badge/license-Apache%202-red.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+[![Build Status](https://travis-ci.org/javaor/HelloSSM.svg?branch=master)](https://travis-ci.org/javaor/HelloSSM)
 
    使用Spring +Spring MVC +Mybatis 构建的简单的框架的Demo，前端界面使用`vue.js+bootstrap`，后台使用`Spring MVC Restful`控制器实现前后端分离。
    后面会使用`webpack`打包实现前端资源的部署
