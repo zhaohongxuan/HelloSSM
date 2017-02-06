@@ -27,11 +27,15 @@ public class IUserServiceImpl implements IUserService {
 
     @Override
     public Boolean addUser(User user) {
-        return userMapper.insertSelective(user)>0?true:false;
+        return userMapper.insertSelective(user) > 0;
     }
 
     @Override
     public Boolean deleteUser(Integer id) {
-        return userMapper.deleteByPrimaryKey(id)>0?true:false;
+        return userMapper.deleteByPrimaryKey(id) > 0;
+    }
+    @Override
+    public Boolean updateUser(User user) {
+        return userMapper.updateByPrimaryKeySelective(user) > 0;
     }
 }

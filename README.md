@@ -8,7 +8,8 @@
    1. 实现Spring、SpringMVC、Mybatis三个框架的整合
    2. 使用ehcache缓存
    3. vue.js的简单使用
-   3. Mybatis Generator的使用
+   4. Maven Profile的使用，方面环境切换
+   5. Mybatis Generator的使用
    
 
 ## 一、配置开发环境

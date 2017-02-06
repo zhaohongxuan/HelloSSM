@@ -20,29 +20,21 @@ public class SSMTest {
     private static Logger logger = LoggerFactory.getLogger(SSMTest.class);
     @Resource
     private IUserService userService;
-    @Resource
-    private UserMapper userMapper;
 
     @Test
-    public void test1() {
-        long beginTime=System.nanoTime();
-        User user = userService.getUserById(1);
-        long endTime=System.nanoTime();
-        System.out.println("查询时间 :" + (endTime-beginTime));
-        logger.info("姓名："+user.getUserName());
-//        logger.info(JSON.toJSONString(user));
-    }
-    @Test
     public void testUser(){
+        logger.info("========================Test Begin===========================");
         User user = new User("testUser","123456");
-        int insertResult = userMapper.insertSelective(user);
-        Assert.assertEquals(1,insertResult);
+        Boolean insertResult = userService.addUser(user);
+        Assert.assertTrue(insertResult);
         int userId = user.getId();
-        User userFind = userMapper.selectUserByUserId(userId);
+        User userFind = userService.getUserById(userId);
         Assert.assertNotNull(userFind);
         userFind.setUserName("newUser");
-        int updateResult = userMapper.updateByPrimaryKeySelective(userFind);
-        Assert.assertEquals(1,updateResult);
-        Assert.assertEquals("newUser",userMapper.selectUserByUserId(userId).getUserName());
+        Boolean updateResult = userService.updateUser(userFind);
+        Assert.assertTrue(updateResult);
+        Assert.assertEquals("newUser",userService.getUserById(userId).getUserName());
+        logger.info("========================Test End ===========================");
+
     }
 }
