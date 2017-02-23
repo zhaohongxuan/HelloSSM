@@ -2,7 +2,7 @@
 
    使用Spring +Spring MVC +Mybatis 构建的简单的框架的Demo，前端界面使用`vue.js+bootstrap`，后台使用`Spring MVC Restful`控制器实现前后端分离。
    后面会使用`webpack`打包实现前端资源的部署
-   具体介绍页面请点击 [使用Maven搭建Spring+SpringMVC+Mybatis+ehcache项目](http://zeusjava.com/2015/10/17/build-an-maven-spring-mybatis-ehcache-web-project)
+   具体介绍页面请点击 [使用Maven搭建Spring+SpringMVC+Mybatis+ehcache项目](https://javaor.github.io/2015/10/18/build-an-maven-spring-mybatis-ehcache-web-project/)
    
 ## 主要功能
    1. 实现Spring、SpringMVC、Mybatis三个框架的整合

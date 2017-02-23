@@ -7,13 +7,14 @@
 <head>
     <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.css" rel="stylesheet">
-    <script src="//cdn.bootcss.com/jquery/3.1.0/core.js"></script>
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
     <script src="//cdn.bootcss.com/vue/1.0.26/vue.js"></script>
 
 </head>
 <body>
 <div class="container" style="margin-top: 70px;">
+
 
     <div class="row">
         <div class="col-md-9">
@@ -35,7 +36,7 @@
                         <td>{{user.id}}</td>
                         <td>{{user.userName}}</td>
                         <td>{{user.password}}</td>
-                        <td><button class ="btn btn-sm btn-danger" v-on:click="delete(user.id)">删除</button></td>
+                        <td><button class ="btn btn-sm btn-danger" v-on:click="deleteUser(user.id)">删除</button></td>
                     <tr>
                     </tbody>
                 </table>
@@ -51,7 +52,7 @@
                     <label for="password">密码：</label>
                     <input v-model="password" type="password" class="form-control" id="password" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-default" v-on:click="add">注册</button>
+                <button type="submit" class="btn btn-default" v-on:click="addUser">注册</button>
             </div>
 
         </div>

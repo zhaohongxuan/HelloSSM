@@ -18,7 +18,7 @@ new Vue({
         });
     },
     methods:{
-        delete:function(id){
+        deleteUser:function(id){
             $.ajax({
                 url: '/HelloSSM/rest/user/delete',
                 method: 'POST',
@@ -49,7 +49,7 @@ new Vue({
         "password":"123456"
     },
     methods:{
-        add:function(){
+        addUser:function(){
             var param = {"id":this.id, "userName":this.userName,"password":this.userName};
             console.log(param);
             $.ajax({
