@@ -4,6 +4,7 @@
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
 %>
 <html>
+<title>用户管理</title>
 <head>
     <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.css" rel="stylesheet">
@@ -20,7 +21,7 @@
         <div class="col-md-9">
             <div class="panel panel-primary">
                 <!-- Default panel contents -->
-                <div class="panel-heading">User List</div>
+                <div class="panel-heading">用户列表</div>
                 <!-- Table -->
                 <table id ="user_tb" class="table table-striped">
                     <thead>
@@ -42,21 +43,30 @@
                 </table>
             </div>
         </div>
-        <div class="col-md-6">
-            <div id="userform">
-                <div class="form-group">
-                    <label for="userName">用户名：</label>
-                    <input v-model="userName" type="text" class="form-control" id="userName">
-                </div>
-                <div class="form-group">
-                    <label for="password">密码：</label>
-                    <input v-model="password" type="password" class="form-control" id="password" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-default" v-on:click="addUser">注册</button>
-            </div>
 
+        <div class="col-md-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">用户注册</div>
+                <div class="panel-body">
+                    <div id="userform">
+                        <div class="form-group">
+                            <label for="userName">用户名：</label>
+                            <input v-model="userName" type="text" class="form-control" id="userName">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">密码：</label>
+                            <input v-model="password" type="password" class="form-control" id="password"
+                                   placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-default" v-on:click="addUser">注册</button>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
+
+</div>
 
 </div>
 
