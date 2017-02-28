@@ -42,8 +42,8 @@ public class UserRestController {
         return userService.addUser(user);
     }
 
-    @RequestMapping(value="/delete", method= RequestMethod.POST)
-    public Boolean delete(Integer id) {
+    @RequestMapping(value="/{id}", method= RequestMethod.DELETE)
+    public Boolean delete(@PathVariable("id")Integer id) {
        if(id==null){
            return false;
        }
