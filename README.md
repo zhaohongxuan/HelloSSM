@@ -66,6 +66,7 @@ maven的设置选项 `use Maven Output Directories` 要勾选上
 3. 点击`Configure` 配置好Tomcat的解压目录，端口号8081
 4. 点击`Deployment选项卡`，点击`+`号，选择一个artifact，就是第二部的war包，Application Context 配置为`HelloSSM`
 5. 点击 Tomcat的右边的`运行`按钮,运行tomcat
+
 ## 四.访问Rest接口
  HOST_URL = http://localhost:8081/HelloSSM
  使用[Postman](https://www.getpostman.com/)来测试我们Rest接口，Postman应该算是一款集美观与强大的接口测试工具了
