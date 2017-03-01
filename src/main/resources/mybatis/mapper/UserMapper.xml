@@ -28,6 +28,13 @@
     from user where id = #{userId}
   </select>
 
+  <select id="selectUserByName" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from user where user_name = #{userName}
+    limit 1
+  </select>
+
   <select id="selectAllUser" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List"/>

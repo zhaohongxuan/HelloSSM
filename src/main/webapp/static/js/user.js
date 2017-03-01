@@ -7,33 +7,31 @@ new Vue({
     ready:function(){
         var self = this;
         $.ajax({
-            url: '/HelloSSM/rest/user/selectAllUser',
+            url: '/HelloSSM/rest/user/',
             method: 'GET',
+            statusCode:{
+                404: function () {
+                    alert("您还没有创建用户");
+                }
+            },
             success: function (data) {
                 self.userList = data;
-            },
-            error: function (error) {
-                alert(JSON.stringify(error));
             }
         });
     },
     methods:{
         deleteUser:function(id){
             $.ajax({
-                url: '/HelloSSM/rest/user/delete',
-                method: 'POST',
-                dataType:"json",
-                data:{"id":id},
-                success: function (result) {
-                    if(result==true){
-                        alert("删除成功");
-                        location.reload();
-                    }else{
-                        alert("删除失败");
+                url: '/HelloSSM/rest/user/'+id,
+                method: 'DELETE',
+                statusCode:{
+                    404: function () {
+                        alert("用户不存在");
                     }
                 },
-                error: function (error) {
-                    alert(JSON.stringify(error));
+                success: function (result) {
+                    alert("删除成功");
+                    location.reload();
                 }
             });
 
@@ -53,7 +51,7 @@ new Vue({
             var param = {"id":this.id, "userName":this.userName,"password":this.userName};
             console.log(param);
             $.ajax({
-                url: '/HelloSSM/rest/user/add',
+                url: '/HelloSSM/rest/user/',
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
@@ -61,13 +59,15 @@ new Vue({
                 method: 'POST',
                 dataType:"json",
                 data:JSON.stringify(param),
-                success: function (result) {
-                    if(result==true){
-                        alert("新增成功");
-                        location.reload();
-                    }else{
-                        alert("新增失败");
+                statusCode:{
+                    409: function () {
+                        alert("新增失败，用户名重复");
                     }
+                },
+                success: function (result) {
+                    alert("新增成功");
+                    location.reload();
+
                 },
                 error: function (error) {
                     alert(JSON.stringify(error));

@@ -10,6 +10,8 @@ import java.util.List;
 public interface IUserService {
    User getUserById(int userId);
 
+   User getUserByUserName(String userName);
+
    List<User> getAllUser();
 
    Boolean addUser(User user);

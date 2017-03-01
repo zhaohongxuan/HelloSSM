@@ -68,20 +68,9 @@ maven的设置选项 `use Maven Output Directories` 要勾选上
 5. 点击 Tomcat的右边的`运行`按钮,运行tomcat
 
 ## 四.访问Rest接口
- HOST_URL = http://localhost:8081/HelloSSM
- 使用[Postman](https://www.getpostman.com/)来测试我们Rest接口，Postman应该算是一款集美观与强大的接口测试工具了
- 访问[Postman](https://www.getpostman.com/)来下载相应平台的Postman，包括chrome版的App
 
-#### 1.查询单个用户
- 查询按照 `/rest/user/{userid}`的方式来查询，比如要查询`userid`为`1`的用户数据，那么实现方法如下：
-![查询单个用户](http://i.imgur.com/1jLkl3O.png)
-#### 2.新增用户
-在代码中我们用RequestBody来接收User的参数，查询方式为`/rest/user/add`,我们新增一个用户方式如下：
-![新增用户](http://i.imgur.com/m2pIUJt.png)
-#### 3.删除用户
-删除使用Http的DELETE动作 `/rest/user/{userid}`的方式来删除，比如要删除`userid`为`15`的用户数据，那么实现方法：
-![删除用户](http://i.imgur.com/KAnsXOX.png)
-#### 4.更新用户
+使用Spring的RestTemplate来进行测试
+直接在`RestFulClientTest`类上点击Junit的按钮进行接口测试
 
 ## 五、页面管理
-在任务栏输入`http://localhost:8081/HelloSSM/user/selectAllUser`,回车出现用户管理的简单页面，一个简单的SSM项目环境就搭建好了。
+在任务栏输入`http://localhost:8081/HelloSSM/user/userManage`,回车出现用户管理的简单页面，一个简单的SSM项目环境就搭建好了。

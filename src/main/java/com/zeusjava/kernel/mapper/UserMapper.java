@@ -12,6 +12,8 @@ public interface UserMapper {
 
     User selectUserByUserId(@Param("userId") Integer userId);
 
+    User selectUserByName(@Param("userName") String userName);
+
     List<User> selectAllUser();
 
     int deleteByPrimaryKey(@Param("id") Integer id);

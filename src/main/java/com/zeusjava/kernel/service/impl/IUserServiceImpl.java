@@ -21,6 +21,11 @@ public class IUserServiceImpl implements IUserService {
     }
 
     @Override
+    public User getUserByUserName(String userName) {
+        return userMapper.selectUserByName(userName);
+    }
+
+    @Override
     public List<User> getAllUser() {
         return userMapper.selectAllUser();
     }

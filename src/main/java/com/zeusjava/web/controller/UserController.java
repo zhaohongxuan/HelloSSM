@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-    @RequestMapping(value = "/selectAllUser",method = RequestMethod.GET)
+    @RequestMapping(value = "/userManage",method = RequestMethod.GET)
     public String getAllUsers(){
         return "userList";
     }
