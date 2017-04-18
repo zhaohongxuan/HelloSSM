@@ -51,16 +51,17 @@ insert  into `user`(`user_name`,`password`) values ('赵小轩','123456');
 
 
 ## 三.添加tomcat服务器并部署war包
-####1.`File-Project Structure`点击`Artifacts`一栏
+
+#### 1.`File-Project Structure`点击`Artifacts`一栏
 点击`+`，选择`Web-Application-Exploded`然后选择from maven选中本项目
 Web Application Exploded是没有压缩的war包，相当于文件夹
 Web Application Achieved是压缩后的war包
-####2.生成war包
+#### 2.生成war包
 依次执行maven Lifecyle的`clean->compile->package`命令
 maven会在target目录生成war包
 ##### Tips：
 maven的设置选项 `use Maven Output Directories` 要勾选上
-####3.配置Tomcat
+#### 3.配置Tomcat
 1. 点击`Run-Run Configurations`
 2. 点击`+`选择`tomcat server->local`
 3. 点击`Configure` 配置好Tomcat的解压目录，端口号8081
