@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.org/javaor/HelloSSM.svg?branch=master)](https://travis-ci.org/javaor/HelloSSM)
 
-   使用Spring +Spring MVC +Mybatis 构建的简单的框架的Demo，前端界面使用`vue.js+bootstrap`，后台使用`Spring MVC Restful`控制器实现前后端分离。
-   后面会使用`webpack`打包实现前端资源的部署
-   具体介绍页面请点击 [使用Maven搭建Spring+SpringMVC+Mybatis+ehcache项目](http://zeusjava.com/2015/10/17/build-an-maven-spring-mybatis-ehcache-web-project)
-
+   使用Spring +Spring MVC +Mybatis 构建的简单的框架的Demo，前端界面使用`vue.js+bulma`，后台使用`Spring MVC Restful`控制器实现前后端分离。
+   使用`webpack`打包实现前端资源的部署
+   具体介绍页面请点击 [使用Maven搭建Spring+SpringMVC+Mybatis+ehcache项目](https://javaor.github.io/2015/10/18/build-an-maven-spring-mybatis-ehcache-web-project/)
+   文章可能已经过去很久了，和目前的代码稍微有点出入，主要是前端代码的变化。
 ## 主要功能
    1. 实现Spring、SpringMVC、Mybatis三个框架的整合
    2. 使用ehcache缓存
@@ -64,7 +64,7 @@ maven的设置选项 `use Maven Output Directories` 要勾选上
 #### 3.配置Tomcat
 1. 点击`Run-Run Configurations`
 2. 点击`+`选择`tomcat server->local`
-3. 点击`Configure` 配置好Tomcat的解压目录，端口号8081
+3. 点击`Configure` 配置好Tomcat的解压目录，端口号8082
 4. 点击`Deployment选项卡`，点击`+`号，选择一个artifact，就是第二部的war包，Application Context 配置为`HelloSSM`
 5. 点击 Tomcat的右边的`运行`按钮,运行tomcat
 
@@ -73,5 +73,9 @@ maven的设置选项 `use Maven Output Directories` 要勾选上
 使用Spring的RestTemplate来进行测试
 直接在`RestFulClientTest`类上点击Junit的按钮进行接口测试
 
-## 五、页面管理
-在任务栏输入`http://localhost:8081/HelloSSM/user/userManage`,回车出现用户管理的简单页面，一个简单的SSM项目环境就搭建好了。
+## 五、前端
+1. 首先要确保你的电脑上安装了npm进入前端资源文件夹 假如现在的目录就在HelloSSM的目录下面，则需要 `cd src/main/webapp/frontend` 进入到前端资源的文件夹下面，然后`npm install` 安装依赖
+2. 然后执行命令 `npm run dev` 前端资源就会部署起来了，运行在8080端口
+
+## 六、页面管理
+在任务栏输入`http://localhost:8080/`,回车出现用户管理的简单页面，一个简单的SSM+vuejs 前后端分离的项目环境就搭建好了。
