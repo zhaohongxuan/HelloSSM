@@ -13,7 +13,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr v-for="user in userList" :key="user">
+                    <tr v-for="user in userList" :key="user.id">
                         <td>{{user.id}}</td>
                         <td>{{user.userName}}</td>
                         <td>{{user.password}}</td>

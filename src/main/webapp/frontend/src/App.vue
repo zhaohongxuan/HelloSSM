@@ -9,8 +9,8 @@
         </div>
         <div class="column">
 
-          <user-list></user-list>
-          <add-user></add-user>
+          <router-view></router-view>
+
         </div>
       </div>
     </div>
@@ -29,6 +29,7 @@ export default {
   components:{Top,UserList,AddUser,SideBar},
   data () {
    return {
+
    }
   }
 }

@@ -5,10 +5,10 @@
     </p>
     <ul class="menu-list">
       <li>
-        <a >Manage Your Team</a>
+        <a >用户管理</a>
         <ul>
-          <li><a class="is-active">Members</a></li>
-          <li><a>Add a member</a></li>
+          <li> <router-link to="/UserList" >用户列表</router-link> </li>
+          <li> <router-link to="/AddUser">添加用户</router-link> </li>
         </ul>
       </li>
     </ul>

@@ -1,7 +1,7 @@
 <template>
       <div class="col-md-3">
             <div class="panel">
-                <div class="panel-heading">用户注册</div>
+                <div class="panel-heading">添加用户</div>
                 <div class="panel-body">
                     <div class="field">
                         <div class="control">

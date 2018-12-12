@@ -12,7 +12,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bulma": "^0.7.1",
-    "vue": "^2.5.11"
+    "vue": "^2.5.11",
+    "vue-router": "^3.0.2"
   },
   "browserslist": [
     "> 1%",
